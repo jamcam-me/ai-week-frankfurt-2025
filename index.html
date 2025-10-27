@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Big Rock Intelligence × AI Week Frankfurt 2025</title>
+    <script>
+        window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+    </script>
+    <script defer src="/_vercel/insights/script.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Jost:wght@300;400;500;600;700&display=swap');
+
+        /* BRI Brand Color System */
+        :root {
+            --navy-900: #020b15;
+            --navy-800: #051429;
+            --navy-700: #0a1f44;
+            --navy-600: #0f2a5a;
+            --navy-500: #1a3970;
+            --navy-400: #4a6391;
+
+            --gold-900: #8b7640;
+            --gold-800: #b8985a;
+            --gold-700: #dab86e;
+            --gold-600: #e3c587;
+            --gold-500: #ecd2a0;
+            --gold-400: #f5dfb9;
+
+            --green-900: #0d1512;
+            --green-800: #162420;
+            --green-700: #1f302d;
+            --green-600: #2d453f;
+            --green-500: #3b5a52;
+            --green-400: #5d9182;
+
+            --cyber-navy: var(--navy-700);
+            --evergreen-intel: var(--green-700);
+            --executive-gold: var(--gold-700);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Jost', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: linear-gradient(135deg, var(--navy-900) 0%, var(--navy-800) 50%, var(--green-900) 100%);
+            color: #f5f5f5;
+            min-height: 100vh;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 60px;
+            padding: 40px 20px;
+            background: rgba(218, 184, 110, 0.05);
+            border-radius: 16px;
+            border: 1px solid rgba(218, 184, 110, 0.2);
+        }
+
+        .logo {
+            font-family: 'Cinzel', serif;
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--executive-gold);
+            margin-bottom: 30px;
+            letter-spacing: 2px;
+        }
+
+        h1 {
+            font-family: 'Cinzel', serif;
+            font-size: 2.8rem;
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .subtitle {
+            font-size: 1.3rem;
+            color: var(--gold-600);
+            margin-bottom: 10px;
+            font-weight: 400;
+        }
+
+        .event-dates {
+            font-size: 1.1rem;
+            color: var(--soft-steel, #a4aba4);
+            margin-top: 15px;
+            font-weight: 300;
+        }
+
+        .mission {
+            text-align: center;
+            font-size: 1.2rem;
+            color: var(--gold-600);
+            margin: 40px 0;
+            padding: 30px;
+            background: rgba(218, 184, 110, 0.08);
+            border-radius: 12px;
+            border-left: 4px solid var(--executive-gold);
+        }
+
+        .event-section {
+            margin: 50px 0;
+            padding: 40px;
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 16px;
+            border: 1px solid rgba(218, 184, 110, 0.15);
+        }
+
+        .event-section h2 {
+            font-family: 'Cinzel', serif;
+            font-size: 1.8rem;
+            color: var(--executive-gold);
+            margin-bottom: 20px;
+        }
+
+        .event-details {
+            display: grid;
+            gap: 15px;
+            margin: 25px 0;
+        }
+
+        .detail-item {
+            display: flex;
+            gap: 15px;
+            align-items: flex-start;
+        }
+
+        .detail-label {
+            font-weight: 600;
+            color: var(--gold-600);
+            min-width: 100px;
+        }
+
+        .detail-value {
+            color: #e0e0e0;
+        }
+
+        .speakers-grid {
+            display: grid;
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .speaker-card {
+            padding: 20px;
+            background: rgba(218, 184, 110, 0.05);
+            border-radius: 12px;
+            border-left: 3px solid var(--gold-700);
+        }
+
+        .speaker-name {
+            font-weight: 600;
+            color: var(--executive-gold);
+            font-size: 1.1rem;
+            margin-bottom: 8px;
+        }
+
+        .speaker-company {
+            color: var(--gold-500);
+            font-size: 0.95rem;
+            margin-bottom: 10px;
+        }
+
+        .speaker-topic {
+            color: #d0d0d0;
+            font-size: 1rem;
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+
+        .speaker-description {
+            color: #b0b0b0;
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+
+        .cta-section {
+            text-align: center;
+            margin: 60px 0 40px;
+            padding: 50px 30px;
+            background: linear-gradient(135deg, rgba(218, 184, 110, 0.1) 0%, rgba(31, 48, 45, 0.1) 100%);
+            border-radius: 16px;
+            border: 1px solid rgba(218, 184, 110, 0.25);
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 18px 40px;
+            background: var(--executive-gold);
+            color: var(--navy-900);
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            margin: 10px;
+        }
+
+        .cta-button:hover {
+            background: var(--gold-600);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(218, 184, 110, 0.3);
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 80px;
+            padding: 40px 20px;
+            border-top: 1px solid rgba(218, 184, 110, 0.2);
+        }
+
+        .contact-info {
+            color: var(--gold-500);
+            font-size: 0.95rem;
+            margin: 10px 0;
+        }
+
+        .contact-info a {
+            color: var(--executive-gold);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .contact-info a:hover {
+            color: var(--gold-600);
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            .subtitle {
+                font-size: 1.1rem;
+            }
+
+            .event-section {
+                padding: 25px;
+            }
+
+            .cta-button {
+                width: 100%;
+                margin: 10px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">🪨🏔️ BIG ROCK INTELLIGENCE</div>
+            <h1>AI Week Frankfurt 2025</h1>
+            <div class="subtitle">Real AI, Real Results</div>
+            <div class="event-dates">October 28-31, 2025 | Frankfurt am Main</div>
+        </header>
+
+        <div class="mission">
+            Our Mission: Empowering everyone to use AI safely and securely
+        </div>
+
+        <!-- Tuesday Session -->
+        <div class="event-section">
+            <h2>Tuesday, October 28</h2>
+            <h3 style="color: #e0e0e0; font-size: 1.4rem; margin: 15px 0;">AI Security Governance - From Shadow AI to Secure-by-Design</h3>
+
+            <div class="event-details">
+                <div class="detail-item">
+                    <span class="detail-label">Time:</span>
+                    <span class="detail-value">11:00-12:00</span>
+                </div>
+                <div class="detail-item">
+                    <span class="detail-label">Location:</span>
+                    <span class="detail-value">AI Week Frankfurt Expo, Room K</span>
+                </div>
+                <div class="detail-item">
+                    <span class="detail-label">Format:</span>
+                    <span class="detail-value">Interactive Roundtable</span>
+                </div>
+                <div class="detail-item">
+                    <span class="detail-label">Partner:</span>
+                    <span class="detail-value">Merck KGaA</span>
+                </div>
+            </div>
+
+            <p style="color: #d0d0d0; margin-top: 25px; line-height: 1.7;">
+                Join us for an interactive roundtable addressing the questions most enterprises avoid until it's too late.
+                How do you systematically identify and assess Shadow AI before security risks escalate?
+                What's actually achievable in the first 30 days? When budget and time are constrained, which governance
+                measures get prioritized—and how do you make that call under regulatory pressure and CEO expectations?
+            </p>
+        </div>
+
+        <!-- Friday Session -->
+        <div class="event-section">
+            <h2>Friday, October 31</h2>
+            <h3 style="color: #e0e0e0; font-size: 1.4rem; margin: 15px 0;">Lightning Talks: Real AI, Real Results</h3>
+
+            <div class="event-details">
+                <div class="detail-item">
+                    <span class="detail-label">Time:</span>
+                    <span class="detail-value">10:00-12:00</span>
+                </div>
+                <div class="detail-item">
+                    <span class="detail-label">Location:</span>
+                    <span class="detail-value">Rivvers Frankfurt, Baseler Str. 48</span>
+                </div>
+                <div class="detail-item">
+                    <span class="detail-label">Format:</span>
+                    <span class="detail-value">5 x 20-25 minute sessions (demo + Q&A)</span>
+                </div>
+            </div>
+
+            <p style="color: #d0d0d0; margin: 25px 0 30px; line-height: 1.7;">
+                No theory. No PowerPoint death. Just working demos from practitioners who use these tools daily.
+                Practical AI workflows you can use Monday morning.
+            </p>
+
+            <div class="speakers-grid">
+                <div class="speaker-card">
+                    <div class="speaker-name">Thomas Kopiniski</div>
+                    <div class="speaker-company">GAIA Lab</div>
+                    <div class="speaker-topic">'In Fact' AI Tool for Hypothesis Verification</div>
+                    <div class="speaker-description">Balanced evidence gathering + probabilistic analysis for research workflows</div>
+                </div>
+
+                <div class="speaker-card">
+                    <div class="speaker-name">Sandra Cameron</div>
+                    <div class="speaker-company">Executive Coach</div>
+                    <div class="speaker-topic">AI-Assisted Data Analysis for Executive Coaching</div>
+                    <div class="speaker-description">Word cloud generation from interview transcripts using ChatGPT + Python</div>
+                </div>
+
+                <div class="speaker-card">
+                    <div class="speaker-name">Florian Fürst</div>
+                    <div class="speaker-company">AI Implementation Specialist</div>
+                    <div class="speaker-topic">No-Code AI Apps with RAG (Softr + n8n)</div>
+                    <div class="speaker-description">Build intelligent applications without writing code</div>
+                </div>
+
+                <div class="speaker-card">
+                    <div class="speaker-name">Valeriya Pilkevich</div>
+                    <div class="speaker-company">AIMS - AI Made Simple</div>
+                    <div class="speaker-topic">AI-Powered Browsers: Atlas & Comet</div>
+                    <div class="speaker-description">The future of browsing is here—browsers that think, search, and act with you</div>
+                </div>
+
+                <div class="speaker-card">
+                    <div class="speaker-name">James Cameron</div>
+                    <div class="speaker-company">Big Rock Intelligence</div>
+                    <div class="speaker-topic">Custom Instructions for Smarter AI Outputs</div>
+                    <div class="speaker-description">Consistency improvements through structured prompting</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- CTA Section -->
+        <div class="cta-section">
+            <h2 style="color: var(--executive-gold); margin-bottom: 25px; font-family: 'Cinzel', serif;">
+                Let's Connect at AI Week Frankfurt
+            </h2>
+            <p style="color: #d0d0d0; margin-bottom: 35px; font-size: 1.1rem;">
+                Exploring AI governance, security, or operational deployment for your organization?
+            </p>
+            <a href="mailto:james@bigrock-intel.ai" class="cta-button">Schedule a Conversation</a>
+            <a href="https://linkedin.com/in/jamcam-cyberleader" class="cta-button" target="_blank">Connect on LinkedIn</a>
+        </div>
+
+        <!-- Footer -->
+        <footer>
+            <div class="logo" style="margin-bottom: 20px;">🪨🏔️ BIG ROCK INTELLIGENCE</div>
+            <div style="color: var(--gold-600); font-size: 1.1rem; margin-bottom: 25px;">
+                Bridging AI Innovation with Enterprise Security
+            </div>
+            <div class="contact-info">
+                <strong>James Cameron</strong> | AI Governance & Cybersecurity Executive Advisor
+            </div>
+            <div class="contact-info">
+                <a href="mailto:james@bigrock-intel.ai">james@bigrock-intel.ai</a> |
+                <a href="tel:+4915110515242">+49 1511 0515 242</a>
+            </div>
+            <div class="contact-info">
+                <a href="https://linkedin.com/in/jamcam-cyberleader" target="_blank">LinkedIn</a> |
+                <a href="https://bigrock-intel.ai" target="_blank">bigrock-intel.ai</a>
+            </div>
+            <div style="margin-top: 40px; color: var(--soft-steel, #a4aba4); font-size: 0.85rem;">
+                © 2025 Big Rock Intelligence. Frankfurt am Main, Germany.
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
