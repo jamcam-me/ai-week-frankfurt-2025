@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<!-- Force deployment: 2025-11-03 -->
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Big Rock Intelligence × AI Week Frankfurt 2025</title>
+    <title>Big Rock Intelligence × AI Week Frankfurt 2025 | AI Governance & Operations Platform</title>
     <script>
         window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
     </script>
@@ -11,8 +11,9 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Jost:wght@300;400;500;600;700&display=swap');
 
-        /* BRI Brand Color System */
+        /* Big Rock Intelligence Brand Color System v3.0 */
         :root {
+            /* Primary Brand Color Families */
             --navy-900: #020b15;
             --navy-800: #051429;
             --navy-700: #0a1f44;
@@ -34,9 +35,25 @@
             --green-500: #3b5a52;
             --green-400: #5d9182;
 
+            /* Legacy Aliases */
             --cyber-navy: var(--navy-700);
             --evergreen-intel: var(--green-700);
             --executive-gold: var(--gold-700);
+            --desaturated-green: var(--green-400);
+
+            /* Secondary Colors */
+            --cyber-graphite: #2b2b2d;
+            --soft-steel: #a4aba4;
+            --light-stone: #d9ded9;
+            --warm-rock: #574536;
+
+            /* Spacing Scale */
+            --space-xs: 0.5rem;
+            --space-sm: 1rem;
+            --space-md: 1.5rem;
+            --space-lg: 2rem;
+            --space-xl: 3rem;
+            --space-2xl: 4rem;
         }
 
         * {
@@ -46,359 +63,922 @@
         }
 
         body {
-            font-family: 'Jost', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-            background: linear-gradient(135deg, var(--navy-900) 0%, var(--navy-800) 50%, var(--green-900) 100%);
-            color: #f5f5f5;
-            min-height: 100vh;
+            font-family: 'Jost', sans-serif;
+            background: linear-gradient(135deg, var(--cyber-navy) 0%, var(--evergreen-intel) 100%);
+            color: var(--light-stone);
             line-height: 1.6;
+            min-height: 100vh;
         }
 
-        .container {
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 40px 20px;
+        .main-content {
+            padding: 1rem 2rem;
+            position: relative;
+            overflow: hidden;
         }
 
-        header {
-            text-align: center;
-            margin-bottom: 60px;
-            padding: 40px 20px;
-            background: rgba(218, 184, 110, 0.05);
+        .content-section {
+            max-width: 1400px;
+            width: 100%;
+            margin: 0 auto 6rem auto;
+            position: relative;
+            z-index: 2;
+        }
+
+        .content-section:first-child {
+            margin-top: 1rem;
+        }
+
+        /* Unified Section Framing */
+        .section-ai-governance {
+            background: linear-gradient(135deg, var(--green-800) 0%, var(--navy-700) 100%);
+            border: 3px solid var(--desaturated-green);
             border-radius: 16px;
-            border: 1px solid rgba(218, 184, 110, 0.2);
+            padding: var(--space-2xl);
+            margin-bottom: 4rem;
+            box-shadow: 0 8px 32px rgba(93, 145, 130, 0.3);
         }
 
-        .logo {
-            font-family: 'Cinzel', serif;
-            font-size: 1.2rem;
-            font-weight: 600;
-            color: var(--executive-gold);
-            margin-bottom: 30px;
-            letter-spacing: 2px;
+        .section-ai-operations {
+            background: linear-gradient(135deg, var(--navy-700) 0%, var(--navy-800) 100%);
+            border: 3px solid var(--soft-steel);
+            border-radius: 16px;
+            padding: var(--space-2xl);
+            margin-bottom: 4rem;
+            box-shadow: 0 8px 32px rgba(164, 171, 164, 0.2);
         }
 
+        .section-thought-leadership {
+            background: linear-gradient(135deg, var(--green-900) 0%, var(--navy-800) 100%);
+            border: 3px solid var(--desaturated-green);
+            border-radius: 16px;
+            padding: var(--space-2xl);
+            margin-bottom: 4rem;
+            box-shadow: 0 8px 32px rgba(93, 145, 130, 0.3);
+        }
+
+        .section-connect {
+            background: linear-gradient(135deg, var(--navy-700) 0%, var(--gold-900) 100%);
+            border: 3px solid var(--soft-steel);
+            border-radius: 16px;
+            padding: var(--space-2xl);
+            margin-bottom: 4rem;
+            box-shadow: 0 8px 32px rgba(164, 171, 164, 0.2);
+        }
+
+        /* Typography - 3-Tier System */
         h1 {
             font-family: 'Cinzel', serif;
-            font-size: 2.8rem;
+            font-size: 2.1rem;
             font-weight: 700;
-            color: #ffffff;
-            margin-bottom: 20px;
-            line-height: 1.2;
-        }
-
-        .subtitle {
-            font-size: 1.3rem;
-            color: var(--gold-600);
-            margin-bottom: 10px;
-            font-weight: 400;
-        }
-
-        .event-dates {
-            font-size: 1.1rem;
-            color: var(--soft-steel, #a4aba4);
-            margin-top: 15px;
-            font-weight: 300;
-        }
-
-        .mission {
+            color: var(--executive-gold);
             text-align: center;
-            font-size: 1.2rem;
-            color: var(--gold-600);
-            margin: 40px 0;
-            padding: 30px;
-            background: rgba(218, 184, 110, 0.08);
-            border-radius: 12px;
-            border-left: 4px solid var(--executive-gold);
+            margin-bottom: 1.5rem;
+            text-transform: none;
+            letter-spacing: 0.1px;
+            line-height: 1.5;
+            text-shadow: 0 2px 8px rgba(218, 184, 110, 0.3);
+            max-width: 1000px;
+            margin-left: auto;
+            margin-right: auto;
         }
 
-        .event-section {
-            margin: 50px 0;
-            padding: 40px;
-            background: rgba(255, 255, 255, 0.03);
-            border-radius: 16px;
-            border: 1px solid rgba(218, 184, 110, 0.15);
-        }
-
-        .event-section h2 {
+        h2 {
             font-family: 'Cinzel', serif;
-            font-size: 1.8rem;
-            color: var(--executive-gold);
-            margin-bottom: 20px;
-        }
-
-        .event-details {
-            display: grid;
-            gap: 15px;
-            margin: 25px 0;
-        }
-
-        .detail-item {
-            display: flex;
-            gap: 15px;
-            align-items: flex-start;
-        }
-
-        .detail-label {
-            font-weight: 600;
-            color: var(--gold-600);
-            min-width: 100px;
-        }
-
-        .detail-value {
-            color: #e0e0e0;
-        }
-
-        .speakers-grid {
-            display: grid;
-            gap: 20px;
-            margin-top: 30px;
-        }
-
-        .speaker-card {
-            padding: 20px;
-            background: rgba(218, 184, 110, 0.05);
-            border-radius: 12px;
-            border-left: 3px solid var(--gold-700);
-        }
-
-        .speaker-name {
+            font-size: 2rem;
             font-weight: 600;
             color: var(--executive-gold);
-            font-size: 1.1rem;
-            margin-bottom: 8px;
+            text-align: center;
+            margin-bottom: 2rem;
+            text-transform: none;
+            letter-spacing: 0.3px;
+            line-height: 1.4;
         }
 
-        .speaker-company {
-            color: var(--gold-500);
-            font-size: 0.95rem;
-            margin-bottom: 10px;
+        h3 {
+            font-family: 'Cinzel', serif;
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--light-stone);
+            margin-bottom: 1rem;
+            text-transform: none;
+            letter-spacing: 0.3px;
+            line-height: 1.4;
         }
 
-        .speaker-topic {
-            color: #d0d0d0;
+        p {
             font-size: 1rem;
-            margin-bottom: 8px;
+            font-family: 'Jost', sans-serif;
+            margin-bottom: 1rem;
+            text-align: center;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.6;
+            color: var(--light-stone);
+        }
+
+        .lead-text {
+            font-size: 1.4rem;
+            font-weight: 500;
+            color: var(--light-stone);
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        /* Color Variation for Visual Rhythm */
+        .text-soft-steel {
+            color: var(--soft-steel);
+        }
+
+        .text-green-accent {
+            color: var(--desaturated-green);
             font-weight: 500;
         }
 
-        .speaker-description {
-            color: #b0b0b0;
-            font-size: 0.9rem;
+        .text-gold-light {
+            color: var(--gold-500);
+            font-weight: 500;
+        }
+
+        .section-intro {
+            color: var(--soft-steel);
+            font-size: 1.05rem;
+        }
+
+        .rhetorical-question {
+            color: var(--gold-500);
+        }
+
+        /* Grid Layouts */
+        .value-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        /* Unified Big Rock Intelligence Card Component */
+        .value-card, .topic-box, .bri-card {
+            background: rgba(10, 31, 68, 0.4);
+            border: 1px solid rgba(218, 184, 110, 0.2);
+            border-radius: 12px;
+            padding: var(--space-md);
+            text-align: left;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .value-card:hover, .topic-box:hover, .bri-card:hover {
+            background: rgba(10, 31, 68, 0.6);
+            border-color: var(--gold-700);
+            transform: translateY(-4px);
+            box-shadow: 0 8px 32px rgba(218, 184, 110, 0.3);
+        }
+
+        .value-card h4, .topic-box h4, .bri-card h4 {
+            color: var(--soft-steel);
+            font-family: 'Jost', sans-serif;
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: var(--space-xs);
+            text-transform: none;
+        }
+
+        .value-card p, .topic-box p, .bri-card p {
+            color: var(--light-stone);
+            text-align: left;
+            font-size: 0.95rem;
+            margin-bottom: var(--space-xs);
+            font-family: 'Jost', sans-serif;
+            text-transform: none;
             line-height: 1.5;
         }
 
-        .cta-section {
-            text-align: center;
-            margin: 60px 0 40px;
-            padding: 50px 30px;
-            background: linear-gradient(135deg, rgba(218, 184, 110, 0.1) 0%, rgba(31, 48, 45, 0.1) 100%);
-            border-radius: 16px;
-            border: 1px solid rgba(218, 184, 110, 0.25);
-        }
-
-        .cta-button {
+        /* CTA */
+        .cta-button, .bri-cta-button {
             display: inline-block;
-            padding: 18px 40px;
             background: var(--executive-gold);
             color: var(--navy-900);
-            text-decoration: none;
+            border: none;
             border-radius: 8px;
+            padding: 14px 28px;
+            font-size: 1rem;
             font-weight: 600;
-            font-size: 1.1rem;
-            transition: all 0.3s ease;
-            margin: 10px;
-        }
-
-        .cta-button:hover {
-            background: var(--gold-600);
-            transform: translateY(-2px);
-            box-shadow: 0 8px 20px rgba(218, 184, 110, 0.3);
-        }
-
-        footer {
-            text-align: center;
-            margin-top: 80px;
-            padding: 40px 20px;
-            border-top: 1px solid rgba(218, 184, 110, 0.2);
-        }
-
-        .contact-info {
-            color: var(--gold-500);
-            font-size: 0.95rem;
-            margin: 10px 0;
-        }
-
-        .contact-info a {
-            color: var(--executive-gold);
             text-decoration: none;
-            transition: color 0.3s;
+            cursor: pointer;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 16px rgba(218, 184, 110, 0.3);
         }
 
-        .contact-info a:hover {
-            color: var(--gold-600);
+        .cta-button:hover, .bri-cta-button:hover {
+            background: var(--gold-600);
+            color: var(--navy-900);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 24px rgba(218, 184, 110, 0.4);
+        }
+
+        /* Background Pattern */
+        .main-content::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image:
+                radial-gradient(circle at 20% 80%, rgba(218, 184, 110, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(93, 145, 130, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 40% 40%, rgba(255, 255, 255, 0.05) 0%, transparent 50%);
+            z-index: 1;
+        }
+
+        /* Big Rock Intelligence Header Styles */
+        .bri-header {
+            padding: 2rem 2rem 1rem;
+            border-bottom: 1px solid rgba(218, 184, 110, 0.3);
+            background: var(--cyber-navy);
+        }
+
+        .bri-header-container {
+            display: grid;
+            grid-template-columns: 1fr 2fr 1fr;
+            align-items: center;
+            gap: 2rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .bri-header-logo {
+            height: 70px;
+            width: auto;
+        }
+
+        .event-title-central {
+            text-align: center;
+            background: rgba(218, 184, 110, 0.1);
+            border: 2px solid rgba(218, 184, 110, 0.3);
+            border-radius: 12px;
+            padding: 1rem 2rem;
+            justify-self: center;
+        }
+
+        .event-title-central h2 {
+            color: var(--executive-gold);
+            font-family: 'Cinzel', serif;
+            font-size: 2.2rem;
+            font-weight: 700;
+            margin: 0;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            line-height: 1.3;
+        }
+
+        .event-logo {
+            height: 60px;
+            width: auto;
+        }
+
+        .event-link {
+            display: inline-block;
+            text-decoration: none;
+            transition: opacity 0.3s ease;
+            cursor: pointer;
+        }
+
+        .event-link:hover {
+            opacity: 0.8;
+        }
+
+        .header-logo-link {
+            display: inline-block;
+            text-decoration: none;
+            transition: opacity 0.3s ease;
+        }
+
+        .header-logo-link:hover {
+            opacity: 0.8;
+        }
+
+        /* Header Column Alignment */
+        .header-left {
+            justify-self: start;
+        }
+
+        .header-right {
+            justify-self: end;
+        }
+
+        /* Big Rock Intelligence Footer Styles */
+        .bri-footer {
+            background: rgba(0, 0, 0, 0.3);
+            padding: 2rem 2rem 1rem;
+            margin-top: 3rem;
+            border-top: 1px solid rgba(218, 184, 110, 0.3);
+        }
+
+        .footer-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 50% 50%;
+            gap: 3rem;
+            align-items: flex-start;
+        }
+
+        .footer-section {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .footer-branding {
+            align-items: flex-start;
+            text-align: left;
+        }
+
+        .footer-contact {
+            align-items: flex-end;
+            text-align: right;
+        }
+
+        .footer-logo {
+            height: 80px;
+            width: auto;
+            margin-bottom: 1rem;
+        }
+
+        .footer-tagline {
+            color: var(--executive-gold);
+            line-height: 1.4;
+            font-size: 1.5rem;
+            font-weight: 500;
+            margin: 0;
+        }
+
+        .footer-subtitle {
+            color: var(--soft-steel);
+            line-height: 1.4;
+            font-size: 1.5rem;
+            font-weight: 500;
+            margin: 0;
+        }
+
+        .footer-contact h4 {
+            color: var(--executive-gold);
+            font-family: 'Cinzel', serif;
+            font-size: 1.1rem;
+            margin: 0 0 var(--space-sm) 0;
+        }
+
+        .footer-cta {
+            color: rgba(255, 255, 255, 0.95);
+            margin: 0 0 0.5rem 0;
+            line-height: 1.4;
+            font-size: 1.1rem;
+            font-weight: 500;
+        }
+
+        .footer-email {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 1rem;
+            margin: 0;
+        }
+
+        .footer-logo-link {
+            display: inline-block;
+            text-decoration: none;
+            transition: opacity 0.3s ease;
+        }
+
+        .footer-logo-link:hover {
+            opacity: 0.8;
+        }
+
+        /* Responsive Grid Classes */
+        .ai-challenges-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: var(--space-md);
+            text-align: center;
+        }
+
+        .capability-cards-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--space-md);
+            margin-bottom: var(--space-lg);
+        }
+
+        .closing-cards-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 1.5rem;
+            margin: 0 0 var(--space-md) 0;
+        }
+
+        .thought-leadership-topics {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        /* Tablet Breakpoint (768px - 1024px) */
+        @media (min-width: 768px) and (max-width: 1024px) {
+            h1 { font-size: 2.5rem; }
+            h2 { font-size: 1.8rem; }
+            h3 { font-size: 1.3rem; }
+            .lead-text { font-size: 1.3rem; }
+
+            .content-section {
+                max-width: clamp(600px, 85%, 900px);
+            }
+
+            p {
+                max-width: clamp(500px, 85%, 800px);
+            }
+        }
+
+        /* About Section Specific Responsive Styles */
+        .about-grid {
+            display: grid;
+            grid-template-columns: 300px 1fr;
+            gap: 2rem;
+            align-items: center;
+            margin: 2rem 0;
+        }
+
+        @media (max-width: 1024px) {
+            .about-grid {
+                grid-template-columns: 250px 1fr;
+                gap: 1.5rem;
+            }
         }
 
         @media (max-width: 768px) {
-            h1 {
-                font-size: 2rem;
+            .about-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
             }
 
-            .subtitle {
-                font-size: 1.1rem;
+            .about-credentials {
+                grid-template-columns: 1fr !important;
             }
 
-            .event-section {
-                padding: 25px;
+            .about-section-container {
+                padding: 1.5rem !important;
+            }
+        }
+
+        /* Mobile Breakpoint (<768px) */
+        @media (max-width: 768px) {
+            h1 { font-size: 2rem; }
+            h2 { font-size: 1.5rem; }
+            h3 { font-size: 1.1rem; }
+            .lead-text { font-size: 1.2rem; }
+
+            /* Reduce main content horizontal padding for mobile */
+            .main-content {
+                padding: 1rem;
             }
 
-            .cta-button {
+            /* Force all responsive grids to single column */
+            .ai-challenges-grid {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+
+            .capability-cards-grid {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+
+            .closing-cards-grid {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+
+            .thought-leadership-topics {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+
+            /* Increase CTA button padding for touch targets (48x48px minimum) */
+            .cta-button, .bri-cta-button {
+                padding: 16px 32px;
                 width: 100%;
-                margin: 10px 0;
+                box-sizing: border-box;
+            }
+
+            .bri-header-container {
+                grid-template-columns: 1fr;
+                grid-template-rows: auto auto auto;
+                gap: 1rem;
+                text-align: center;
+            }
+
+            .header-left, .header-right {
+                justify-self: center;
+            }
+
+            .event-title-central h2 {
+                font-size: 1.5rem;
+                letter-spacing: 1px;
+            }
+
+            .event-logo {
+                height: 50px;
+            }
+
+            .bri-header-logo {
+                height: 50px;
+            }
+
+            .value-grid {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+
+            .section-ai-governance,
+            .section-ai-operations,
+            .section-thought-leadership,
+            .section-connect {
+                padding: 2rem;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .content-section {
+                max-width: clamp(300px, 95%, 600px);
+            }
+
+            p {
+                max-width: clamp(280px, 95%, 600px);
             }
         }
     </style>
 </head>
-<body>
-    <div class="container">
-        <header>
-            <div class="logo">🪨🏔️ BIG ROCK INTELLIGENCE</div>
-            <h1>AI Week Frankfurt 2025</h1>
-            <div class="subtitle">Real AI, Real Results</div>
-            <div class="event-dates">October 28-31, 2025 | Frankfurt am Main</div>
-        </header>
+<body data-analytics-campaign="AI_Week_Frankfurt_2025">
+    <!-- Big Rock Intelligence Header with Logo -->
+    <header class="bri-header">
+        <div class="bri-header-container">
+            <!-- Left: AI Week Frankfurt Logo -->
+            <div class="header-left">
+                <a href="https://ai-week-frankfurt.com/" class="event-link" target="_blank" rel="noopener noreferrer">
+                    <img src="./assets/ai-week-frankfurt-logo.png" alt="AI Week Frankfurt" class="event-logo">
+                </a>
+            </div>
 
-        <div class="mission">
-            Our Mission: Empowering everyone to use AI safely and securely
+            <!-- Center: Event Title (Prominent) -->
+            <div class="event-title-central">
+                <h2>AI WEEK FRANKFURT 2025</h2>
+            </div>
+
+            <!-- Right: Big Rock Intelligence Logo -->
+            <div class="header-right">
+                <a href="https://www.bigrock-intelligence.com/" class="header-logo-link">
+                    <img src="./assets/bri-logo.png" alt="Big Rock Intelligence" class="bri-header-logo">
+                </a>
+            </div>
         </div>
+    </header>
 
-        <!-- Tuesday Session -->
-        <div class="event-section">
-            <h2>Tuesday, October 28</h2>
-            <h3 style="color: #e0e0e0; font-size: 1.4rem; margin: 15px 0;">AI Security Governance - From Shadow AI to Secure-by-Design</h3>
+    <div class="main-content">
+        <!-- Section 1: AI Governance Reality -->
+        <div class="content-section section-ai-governance">
+            <!-- Section Header -->
+            <div style="text-align: center; margin-bottom: var(--space-lg);">
+                <h1>Your AI is live. Is your governance?</h1>
+            </div>
 
-            <div class="event-details">
-                <div class="detail-item">
-                    <span class="detail-label">Time:</span>
-                    <span class="detail-value">11:00-12:00</span>
-                </div>
-                <div class="detail-item">
-                    <span class="detail-label">Location:</span>
-                    <span class="detail-value">AI Week Frankfurt Expo, Room K</span>
-                </div>
-                <div class="detail-item">
-                    <span class="detail-label">Format:</span>
-                    <span class="detail-value">Interactive Roundtable</span>
-                </div>
-                <div class="detail-item">
-                    <span class="detail-label">Partner:</span>
-                    <span class="detail-value">Merck KGaA</span>
+            <!-- AI Governance Challenges Tile -->
+            <div style="background: rgba(10, 31, 68, 0.3); border: 2px solid var(--soft-steel); border-radius: 12px; padding: var(--space-lg); margin: var(--space-lg) auto; max-width: 1000px; text-align: center;">
+                <!-- Title -->
+                <p class="lead-text" style="margin-bottom: var(--space-lg); font-size: 1.3rem;">Three challenges, one solution. We help organizations navigate AI deployment with confidence and compliance.</p>
+
+                <!-- 3 Challenge Boxes -->
+                <div class="ai-challenges-grid">
+                    <div style="border: 2px solid var(--navy-800); border-radius: 8px; padding: var(--space-sm); background: var(--navy-800);">
+                        <h4>EU AI Act Compliance</h4>
+                        <p><strong class="text-green-accent">High-Risk System Classification</strong></p>
+                        <p>Prohibitions Active Feb 2, 2025</p>
+                    </div>
+                    <div style="border: 2px solid var(--navy-800); border-radius: 8px; padding: var(--space-sm); background: var(--navy-800);">
+                        <h4>AI Governance Frameworks</h4>
+                        <p><strong>Enable Innovation, Satisfy Regulators</strong></p>
+                        <p>Operational AI Oversight</p>
+                    </div>
+                    <div style="border: 2px solid var(--navy-800); border-radius: 8px; padding: var(--space-sm); background: var(--navy-800);">
+                        <h4>Secure AI Adoption</h4>
+                        <p><strong>Security as Enabler, Not Blocker</strong></p>
+                        <p>Rapid Deployment with Compliance</p>
+                    </div>
                 </div>
             </div>
 
-            <p style="color: #d0d0d0; margin-top: 25px; line-height: 1.7;">
-                Join us for an interactive roundtable addressing the questions most enterprises avoid until it's too late.
-                How do you systematically identify and assess Shadow AI before security risks escalate?
-                What's actually achievable in the first 30 days? When budget and time are constrained, which governance
-                measures get prioritized—and how do you make that call under regulatory pressure and CEO expectations?
-            </p>
-        </div>
+            <!-- BRI AI Capability Framework Tile -->
+            <div style="background: rgba(93, 145, 130, 0.08); border: 2px solid var(--desaturated-green); border-radius: 12px; padding: var(--space-lg); margin: var(--space-xl) auto var(--space-lg) auto; max-width: 1000px;">
+                <!-- Title Header -->
+                <h3 style="text-align: center; color: var(--gold-500); margin-bottom: var(--space-md); font-size: 1.5rem;">AI Challenges We Solve</h3>
 
-        <!-- Friday Session -->
-        <div class="event-section">
-            <h2>Friday, October 31</h2>
-            <h3 style="color: #e0e0e0; font-size: 1.4rem; margin: 15px 0;">Lightning Talks: Real AI, Real Results</h3>
+                <!-- BRI Validation Statement (Lead Text) -->
+                <p style="font-size: 1.3rem; font-weight: 500; line-height: 1.6; color: var(--light-stone); margin: 0 auto var(--space-lg) auto; text-align: center; max-width: 900px;">
+                    Big Rock Intelligence builds AI governance that accelerates innovation instead of blocking it, validates AI investments against business outcomes, and deploys operational AI agents that run 24/7.
+                </p>
 
-            <div class="event-details">
-                <div class="detail-item">
-                    <span class="detail-label">Time:</span>
-                    <span class="detail-value">10:00-12:00</span>
+                <!-- 4 Capability Cards -->
+                <div class="capability-cards-grid">
+                    <div style="background: rgba(10, 31, 68, 0.4); border-left: 3px solid var(--desaturated-green); padding: var(--space-md); border-radius: 8px;">
+                        <h4 style="color: var(--desaturated-green); margin-bottom: 0.5rem; font-size: 1.1rem;">EU AI Act Navigation</h4>
+                        <p style="margin: 0; text-align: left; font-size: 0.95rem; color: var(--light-stone);">High-risk system classification, prohibited use cases, compliance frameworks that enable deployment.</p>
+                    </div>
+                    <div style="background: rgba(10, 31, 68, 0.4); border-left: 3px solid var(--desaturated-green); padding: var(--space-md); border-radius: 8px;">
+                        <h4 style="color: var(--desaturated-green); margin-bottom: 0.5rem; font-size: 1.1rem;">AI Governance That Works</h4>
+                        <p style="margin: 0; text-align: left; font-size: 0.95rem; color: var(--light-stone);">Frameworks that satisfy lawyers, regulators, and risk committees while accelerating AI adoption.</p>
+                    </div>
+                    <div style="background: rgba(10, 31, 68, 0.4); border-left: 3px solid var(--desaturated-green); padding: var(--space-md); border-radius: 8px;">
+                        <h4 style="color: var(--desaturated-green); margin-bottom: 0.5rem; font-size: 1.1rem;">AI Operations Platform</h4>
+                        <p style="margin: 0; text-align: left; font-size: 0.95rem; color: var(--light-stone);">Custom AI agents deployed in days—monitoring, research, compliance, and operational workflows.</p>
+                    </div>
+                    <div style="background: rgba(10, 31, 68, 0.4); border-left: 3px solid var(--desaturated-green); padding: var(--space-md); border-radius: 8px;">
+                        <h4 style="color: var(--desaturated-green); margin-bottom: 0.5rem; font-size: 1.1rem;">Secure AI Adoption</h4>
+                        <p style="margin: 0; text-align: left; font-size: 0.95rem; color: var(--light-stone);">Security teams become enablers—AI tools that work, compliance teams satisfied, competition wondering how you moved so fast.</p>
+                    </div>
                 </div>
-                <div class="detail-item">
-                    <span class="detail-label">Location:</span>
-                    <span class="detail-value">Rivvers Frankfurt, Baseler Str. 48</span>
-                </div>
-                <div class="detail-item">
-                    <span class="detail-label">Format:</span>
-                    <span class="detail-value">5 x 20-25 minute sessions (demo + Q&A)</span>
+
+                <!-- Closing Statement (Rhetorical Question) -->
+                <div style="text-align: center; border-top: 1px solid rgba(93, 145, 130, 0.3); padding-top: var(--space-lg);">
+                    <p class="rhetorical-question" style="font-size: 1.25rem; font-weight: 500; font-style: italic; margin: 0; color: var(--gold-500);">
+                        Is your AI governance enabling innovation or blocking it?
+                    </p>
                 </div>
             </div>
 
-            <p style="color: #d0d0d0; margin: 25px 0 30px; line-height: 1.7;">
-                No theory. No PowerPoint death. Just working demos from practitioners who use these tools daily.
-                Practical AI workflows you can use Monday morning.
-            </p>
-
-            <div class="speakers-grid">
-                <div class="speaker-card">
-                    <div class="speaker-name">Thomas Kopiniski</div>
-                    <div class="speaker-company">GAIA Lab</div>
-                    <div class="speaker-topic">'In Fact' AI Tool for Hypothesis Verification</div>
-                    <div class="speaker-description">Balanced evidence gathering + probabilistic analysis for research workflows</div>
-                </div>
-
-                <div class="speaker-card">
-                    <div class="speaker-name">Sandra Cameron</div>
-                    <div class="speaker-company">Executive Coach</div>
-                    <div class="speaker-topic">AI-Assisted Data Analysis for Executive Coaching</div>
-                    <div class="speaker-description">Word cloud generation from interview transcripts using ChatGPT + Python</div>
-                </div>
-
-                <div class="speaker-card">
-                    <div class="speaker-name">Florian Fürst</div>
-                    <div class="speaker-company">AI Implementation Specialist</div>
-                    <div class="speaker-topic">No-Code AI Apps with RAG (Softr + n8n)</div>
-                    <div class="speaker-description">Build intelligent applications without writing code</div>
-                </div>
-
-                <div class="speaker-card">
-                    <div class="speaker-name">Valeriya Pilkevich</div>
-                    <div class="speaker-company">AIMS - AI Made Simple</div>
-                    <div class="speaker-topic">AI-Powered Browsers: Atlas & Comet</div>
-                    <div class="speaker-description">The future of browsing is here—browsers that think, search, and act with you</div>
-                </div>
-
-                <div class="speaker-card">
-                    <div class="speaker-name">James Cameron</div>
-                    <div class="speaker-company">Big Rock Intelligence</div>
-                    <div class="speaker-topic">Custom Instructions for Smarter AI Outputs</div>
-                    <div class="speaker-description">Consistency improvements through structured prompting</div>
-                </div>
+            <!-- Primary CTA -->
+            <div style="text-align: center; margin-top: var(--space-lg);">
+                <a href="mailto:james@bigrock-intel.ai?subject=AI%20Week%20Frankfurt%202025%20-%20AI%20Governance%20Consultation" class="bri-cta-button" style="width: calc(100% - 2rem); max-width: 100%;">
+                    Schedule Your AI Governance Consultation →
+                </a>
             </div>
         </div>
 
-        <!-- CTA Section -->
-        <div class="cta-section">
-            <h2 style="color: var(--executive-gold); margin-bottom: 25px; font-family: 'Cinzel', serif;">
-                Let's Connect at AI Week Frankfurt
-            </h2>
-            <p style="color: #d0d0d0; margin-bottom: 35px; font-size: 1.1rem;">
-                Exploring AI governance, security, or operational deployment for your organization?
-            </p>
-            <a href="mailto:james@bigrock-intel.ai" class="cta-button">Schedule a Conversation</a>
-            <a href="https://linkedin.com/in/jamcam-cyberleader" class="cta-button" target="_blank">Connect on LinkedIn</a>
+        <!-- About Section: Executive Leadership & Experience -->
+        <div class="content-section section-ai-governance">
+            <!-- Section Container matching other sections -->
+            <div class="about-section-container" style="background: rgba(87, 69, 54, 0.1); border: 2px solid rgba(218, 184, 110, 0.3); border-radius: 12px; padding: var(--space-lg); margin: var(--space-lg) auto; max-width: 1000px; overflow: hidden;">
+
+                <!-- Section Header -->
+                <div style="text-align: center; margin-bottom: 2rem;">
+                    <h2 style="color: var(--executive-gold); font-size: 1.8rem; margin-bottom: 0.5rem;">Who's Behind Your AI Transformation</h2>
+                    <p style="color: var(--soft-steel); font-size: 1.1rem; margin: 0;">Experience that translates complexity into operational reality</p>
+                </div>
+
+                <!-- Two-Column Layout (Desktop) / Single Column (Mobile) -->
+                <div class="about-grid">
+
+                    <!-- Left Column: Professional Image -->
+                    <div style="text-align: center;">
+                        <!-- Professional headshot with enhanced styling -->
+                        <div style="background: linear-gradient(135deg, rgba(218, 184, 110, 0.2) 0%, rgba(10, 31, 68, 0.4) 100%); border: 2px solid var(--executive-gold); border-radius: 8px; padding: 0.4rem; height: 320px; width: 100%; max-width: 280px; margin: 0 auto; box-shadow: 0 8px 24px rgba(218, 184, 110, 0.2);">
+                            <img src="./assets/Familie_Cameron_16072017_37.jpg" alt="James Cameron - Executive Advisor" style="width: 100%; height: 100%; object-fit: cover; border-radius: 6px;">
+                        </div>
+
+                        <!-- Name & Title Below Image -->
+                        <div style="margin-top: 1.2rem;">
+                            <h3 style="color: var(--executive-gold); font-family: 'Cinzel', serif; font-size: 1.3rem; margin-bottom: 0.3rem;">James Cameron</h3>
+                            <p style="color: var(--light-stone); font-size: 0.95rem; margin: 0;">Founder & Executive Advisor</p>
+                            <p style="color: var(--desaturated-green); font-size: 0.9rem; margin: 0.3rem 0;">AI Governance | Cybersecurity | Operations</p>
+                        </div>
+                    </div>
+
+                    <!-- Right Column: Experience & Value Proposition -->
+                    <div>
+                        <!-- Executive Summary -->
+                        <div style="margin-bottom: 1.5rem;">
+                            <p style="font-size: 1.05rem; line-height: 1.7; color: var(--light-stone); text-align: left; margin: 0;">
+                                <span style="color: var(--gold-500); font-weight: 600;">25+ years</span> building and leading global teams, architecting enterprise services, and delivering strategic roadmaps
+                                for <span style="color: var(--desaturated-green); font-weight: 500;">Fortune 500 to SMB</span> across
+                                <span style="color: var(--desaturated-green); font-weight: 500;">all industry verticals</span>. Now deploying that operational expertise to create
+                                AI governance frameworks that accelerate innovation instead of blocking it.
+                            </p>
+                        </div>
+
+                        <!-- Key Credentials Grid -->
+                        <div class="about-credentials" style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1.5rem;">
+                            <!-- Credential Card 1 -->
+                            <div style="background: rgba(10, 31, 68, 0.3); border-left: 3px solid var(--gold-700); padding: 1rem; border-radius: 8px;">
+                                <h4 style="color: var(--gold-500); font-size: 0.95rem; margin-bottom: 0.5rem; text-transform: uppercase; letter-spacing: 1px;">Global Leadership</h4>
+                                <p style="color: var(--light-stone); font-size: 0.9rem; margin: 0; text-align: left; line-height: 1.5;">
+                                    Led Global Teams • Built Services<br>
+                                    Enterprise Architecture • Service Design<br>
+                                    Strategic Roadmaps • 25+ Years
+                                </p>
+                            </div>
+
+                            <!-- Credential Card 2 -->
+                            <div style="background: rgba(10, 31, 68, 0.3); border-left: 3px solid var(--gold-700); padding: 1rem; border-radius: 8px;">
+                                <h4 style="color: var(--gold-500); font-size: 0.95rem; margin-bottom: 0.5rem; text-transform: uppercase; letter-spacing: 1px;">AI & Governance Focus</h4>
+                                <p style="color: var(--light-stone); font-size: 0.9rem; margin: 0; text-align: left; line-height: 1.5;">
+                                    EU AI Act Compliance<br>
+                                    Operational AI Deployment<br>
+                                    24/7 Intelligent Automation
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Unique Value Proposition -->
+                        <div style="background: linear-gradient(90deg, rgba(93, 145, 130, 0.1) 0%, rgba(218, 184, 110, 0.1) 100%); border: 1px solid rgba(218, 184, 110, 0.3); border-radius: 8px; padding: 1.2rem;">
+                            <p style="font-size: 1.05rem; line-height: 1.6; color: var(--light-stone); margin: 0; text-align: left;">
+                                <span style="color: var(--executive-gold); font-weight: 600;">What makes us different:</span>
+                                We don't deliver frameworks—we deploy working AI. From board-level strategy to operational agents running 24/7.
+                                <span style="color: var(--desaturated-green); font-style: italic;">Your security team becomes an enabler, not a blocker.</span>
+                            </p>
+                        </div>
+
+                        <!-- Location & Availability -->
+                        <div style="margin-top: 1.5rem; text-align: left;">
+                            <p style="color: var(--soft-steel); font-size: 0.95rem; margin: 0;">
+                                📍 Based in Frankfurt am Main | 🌍 Supporting organizations across EU
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bottom CTA Bar -->
+                <div style="text-align: center; margin-top: 1.5rem; padding-top: 1.5rem; border-top: 1px solid rgba(218, 184, 110, 0.2);">
+                    <p style="color: var(--gold-500); font-size: 1.05rem; font-weight: 500; margin-bottom: 1rem; padding: 0 0.5rem;">
+                        "Let's discuss how your organization can deploy AI with confidence and compliance."
+                    </p>
+                    <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; padding: 0 0.5rem;">
+                        <a href="https://www.linkedin.com/in/jamcam-cyberleader/" target="_blank" class="bri-cta-button" style="background: linear-gradient(135deg, var(--gold-700) 0%, var(--gold-600) 100%); color: var(--navy-900); border: 2px solid var(--executive-gold); font-weight: 600; min-width: 250px;">
+                            Connect on LinkedIn →
+                        </a>
+                        <a href="mailto:james@bigrock-intel.ai?subject=AI%20Week%20Frankfurt%202025%20-%20Executive%20Discussion" class="bri-cta-button" style="background: linear-gradient(135deg, var(--green-500) 0%, var(--green-400) 100%); color: white; border: 2px solid var(--desaturated-green); font-weight: 600; min-width: 250px;">
+                            Schedule Executive Discussion →
+                        </a>
+                    </div>
+                </div>
+            </div>
         </div>
 
-        <!-- Footer -->
-        <footer>
-            <div class="logo" style="margin-bottom: 20px;">🪨🏔️ BIG ROCK INTELLIGENCE</div>
-            <div style="color: var(--gold-600); font-size: 1.1rem; margin-bottom: 25px;">
-                Bridging AI Innovation with Enterprise Security
+        <!-- Section 2: AI Operations Platform -->
+        <div class="content-section section-ai-operations">
+            <!-- Section Header -->
+            <div style="text-align: center; margin-bottom: var(--space-lg);">
+                <h2>The Big Rock Intelligence AI Operations Platform</h2>
+                <p class="section-intro">We don't deliver PowerPoints. We deploy AI operations that run while you sleep. From manual processes to intelligent automation—measured in days, not quarters.</p>
             </div>
-            <div class="contact-info">
-                <strong>James Cameron</strong> | AI Governance & Cybersecurity Executive Advisor
+
+            <!-- AI Operations Cards -->
+            <div class="value-grid">
+                <div class="value-card">
+                    <h4>Custom AI Workstreams</h4>
+                    <p><span class="text-green-accent">AI agents that monitor regulations, discover opportunities, and track threats 24/7</span>—so your team focuses on decisions, not data collection. <span class="text-soft-steel">Your competitors are still hiring analysts. We built agents that work overnight.</span></p>
+                </div>
+
+                <div class="value-card">
+                    <h4>Process Automation</h4>
+                    <p><span class="text-green-accent">Automated compliance workflows and operational reporting that run continuously</span>—turning manual processes into strategic oversight time. <span class="text-soft-steel">Manual → intelligent → strategic.</span></p>
+                </div>
+
+                <div class="value-card">
+                    <h4>AI Agent Deployment</h4>
+                    <p><span class="text-green-accent">Custom AI agents deployed in days—from research and content generation to operational monitoring</span> that never sleeps. <span class="text-soft-steel">Measured in days, not quarters.</span></p>
+                </div>
+
+                <div class="value-card">
+                    <h4>AI Investment Validation</h4>
+                    <p><span class="text-green-accent">Your CTO says you need $500K for AI infrastructure. We tell you if they're right.</span> Independent validation that cuts through vendor noise. <span class="text-soft-steel">Reality-based AI economics.</span></p>
+                </div>
             </div>
-            <div class="contact-info">
-                <a href="mailto:james@bigrock-intel.ai">james@bigrock-intel.ai</a> |
-                <a href="tel:+4915110515242">+49 1511 0515 242</a>
+        </div>
+
+        <!-- Section 3: Thought Leadership -->
+        <div class="content-section section-thought-leadership">
+            <!-- Section Header -->
+            <div style="text-align: center; margin-bottom: var(--space-lg);">
+                <h2>AI Expertise: The Topics We Help You Master</h2>
             </div>
-            <div class="contact-info">
-                <a href="https://linkedin.com/in/jamcam-cyberleader" target="_blank">LinkedIn</a> |
-                <a href="https://bigrock-intel.ai" target="_blank">bigrock-intel.ai</a>
+
+            <!-- Strategic Intro Text -->
+            <div style="text-align: center; margin-bottom: var(--space-md); max-width: 800px; margin-left: auto; margin-right: auto;">
+                <p><span class="text-green-accent">25+ years</span> translating AI, cyber, and governance complexity. From <span class="text-green-accent">Microsoft, AWS, and Avanade</span> to AI governance frameworks. Available for advisory engagements and board education.</p>
             </div>
-            <div style="margin-top: 40px; color: var(--soft-steel, #a4aba4); font-size: 0.85rem;">
-                © 2025 Big Rock Intelligence. Frankfurt am Main, Germany.
+
+            <!-- Topic Boxes -->
+            <div class="thought-leadership-topics">
+                <div class="topic-box">
+                    <h4 class="text-green-accent">EU AI Act Compliance for High-Risk Systems</h4>
+                    <p style="margin-bottom: 0.5rem;"><span class="text-soft-steel">"Is our AI system high-risk?" "What documentation do we need?" "How do we prove compliance?"</span></p>
+                    <p style="margin: 0; font-style: italic;" class="text-soft-steel">Regulatory answers, not theoretical frameworks.</p>
+                </div>
+                <div class="topic-box">
+                    <h4 class="text-gold-light">AI Governance Frameworks That Enable Innovation</h4>
+                    <p style="margin-bottom: 0.5rem;"><span class="text-soft-steel">"How do we govern AI without slowing deployment?" "What oversight structure satisfies regulators?"</span></p>
+                    <p style="margin: 0; font-style: italic;" class="text-soft-steel">Governance that accelerates, not blocks.</p>
+                </div>
+                <div class="topic-box">
+                    <h4 class="text-green-accent">Operational AI Deployment at Scale</h4>
+                    <p style="margin-bottom: 0.5rem;"><span class="text-soft-steel">"How do we deploy AI agents securely?" "What monitoring do we need?"</span></p>
+                    <p style="margin: 0; font-style: italic;" class="text-soft-steel">AI that works Monday morning, not theory.</p>
+                </div>
             </div>
-        </footer>
+
+            <!-- Publications Footer -->
+            <div style="text-align: center; margin-top: var(--space-lg);">
+                <h3 style="color: var(--gold-500);">Published Thought Leadership & Advisory Availability</h3>
+                <p style="margin: 0 auto var(--space-sm) auto; max-width: 700px;">Topics we write about, advise on, and bring to organizations. <a href="https://www.linkedin.com/in/jamcam-cyberleader/recent-activity/articles/" style="color: var(--desaturated-green); text-decoration: underline; font-weight: 500;">LinkedIn</a> | Available for: AI governance advisory • Executive education</p>
+                <div style="margin-top: var(--space-md);">
+                    <a href="https://outlook.office.com/book/contactbigrockintelai@bigrock-intelligence.com/?ismsaljsauthenabled=true" class="bri-cta-button">Discuss AI Governance Needs →</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section 4: Connect at AI Week Frankfurt -->
+        <div class="content-section section-connect">
+            <!-- Section Header -->
+            <div style="text-align: center; margin-bottom: var(--space-lg);">
+                <h2>What Happens Next: Your Organization Gets AI Clarity</h2>
+            </div>
+
+            <!-- Closing Cards -->
+            <div class="closing-cards-grid">
+                <div class="value-card" style="background: var(--navy-800); border: 2px solid var(--navy-600);">
+                    <h4>We Show You How to Deploy AI</h4>
+                    <p>Most advisors tell you what tools to buy. We show you how to deploy AI that actually works.</p>
+                    <p><strong>25 years.</strong> <span class="text-green-accent">Microsoft, AWS, Avanade. AI governance frameworks.</span></p>
+                </div>
+                <div class="value-card" style="background: var(--navy-800); border: 2px solid var(--navy-600);">
+                    <h4>Bring Your Hardest AI Question</h4>
+                    <p>EU AI Act compliance? AI governance structure? Secure AI deployment?</p>
+                    <p><strong>You heard about us at AI Week. Now bring us your hardest question.</strong></p>
+                </div>
+                <div class="value-card" style="background: var(--navy-800); border: 2px solid var(--navy-600);">
+                    <h4>AI Clarity You Can Act On</h4>
+                    <p>Answers that survive regulator scrutiny. AI deployment you can execute Monday morning.</p>
+                    <p style="font-style: italic;">Not frameworks—working AI.</p>
+                </div>
+            </div>
+
+            <!-- Personal Close -->
+            <div style="text-align: center; margin-top: var(--space-lg);">
+                <p class="lead-text" style="font-style: italic;">
+                    "Your organization deserves AI governance that enables innovation, not blocks it. Let's talk."
+                </p>
+                <p><strong>— James Cameron, AI Governance & Cybersecurity Executive Advisor</strong></p>
+            </div>
+
+            <!-- AI Week CTA Block -->
+            <div style="text-align: center; margin-top: var(--space-md); padding: var(--space-md); background: rgba(218, 184, 110, 0.1); border: 2px solid rgba(218, 184, 110, 0.3); border-radius: 12px; max-width: 700px; margin-left: auto; margin-right: auto;">
+                <h3 style="color: var(--executive-gold);">Ready for AI Governance That Works?</h3>
+                <p style="margin-bottom: var(--space-md);">Bring your hardest AI question. We'll show you what deployment looks like.</p>
+                <a href="https://outlook.office.com/book/contactbigrockintelai@bigrock-intelligence.com/?ismsaljsauthenabled=true" class="bri-cta-button">
+                   Get AI Deployment Answers →
+                </a>
+            </div>
+        </div>
+
     </div>
-</body>
-</html>
+
+    <!-- Big Rock Intelligence Footer -->
+    <footer class="bri-footer">
+        <div class="footer-content">
+            <div class="footer-section footer-branding">
+                <a href="#top" class="footer-logo-link">
+                    <img src="./assets/bri-logo.png" alt="Big Rock Intelligence" class="footer-logo">
+                </a>
+                <p class="footer-tagline text-gold-light">AI Governance & Operations Advisory</p>
+                <p class="footer-subtitle text-soft-steel">AI Week Frankfurt 2025</p>
+            </div>
+            <div class="footer-section footer-contact">
+                <h4>Ready to deploy AI with confidence and compliance?</h4>
+                <p class="footer-cta">Connect with James Cameron</p>
+                <p class="footer-email">📞 +49 15110515242</p>
+                <p class="footer-email">📧 james@bigrock-intel.ai</p>
+                <p class="footer-email">💼 <a href="https://www.linkedin.com/in/jamcam-cyberleader/" style="color: rgba(255, 255, 255, 0.9); text-decoration: none;">linkedin.com/in/jamcam-cyberleader</a></p>
+                <p class="footer-email">🌐 Frankfurt am Main, Germany</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Analytics (GDPR-compliant with consent) -->
+    <script defer src="./shared-assets/bri-analytics-sanitized.js"></script>
+
+    <!-- GDPR Consent Banner -->
+    <script defer src="./shared-assets/bri-consent-banner.js"></script>
+
+    <!-- HubSpot Tracking Code (Portal ID: 47932576) -->
+    <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/47932576.js"></script>
+</body></html>
+
+<!--
+🪨🏔️ Authored by BRI | ⚡ Powered by Claude Code
+Implements BRI Mobile Responsive Web Architecture Standard v1.0
+Single HTML + Responsive CSS (mobile-first architecture)
+Reference: BRI-MOBILE-RESPONSIVE-WEB-ARCHITECTURE-STANDARD.md
+-->
