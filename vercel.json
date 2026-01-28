@@ -9,12 +9,12 @@
   "redirects": [
     {
       "source": "/speaker-deck",
-      "destination": "https://raw.githubusercontent.com/jamcam-me/ai-week-frankfurt-2025/main/BRI-AIW-Week-lightning-talks-speaker-decks.pdf",
+      "destination": "/",
       "permanent": false
     },
     {
       "source": "/lightning-talks",
-      "destination": "https://raw.githubusercontent.com/jamcam-me/ai-week-frankfurt-2025/main/BRI-AIW-Week-lightning-talks-speaker-decks.pdf",
+      "destination": "/",
       "permanent": false
     }
   ],
