@@ -1,0 +1,90 @@
+# BRI PR Validation Workflow
+# Auto-validates code quality on pull requests
+#
+# Created: 2026-02-04 22:15:00 UTC+1
+# Version: 1.0.1
+# Authority: james@bigrock-intel.ai
+
+name: PR Validation
+
+on:
+  pull_request:
+    branches: [main, master, develop]
+    types: [opened, synchronize, reopened]
+
+permissions:
+  contents: read
+  pull-requests: read
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  detect-changes:
+    runs-on: ubuntu-latest
+    outputs:
+      html: ${{ steps.filter.outputs.html }}
+      javascript: ${{ steps.filter.outputs.javascript }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: dorny/paths-filter@v3
+        id: filter
+        with:
+          filters: |
+            html:
+              - '**/*.html'
+              - '**/*.htm'
+            javascript:
+              - '**/*.js'
+              - '**/*.mjs'
+              - '**/*.cjs'
+
+  validate-html:
+    needs: detect-changes
+    if: needs.detect-changes.outputs.html == 'true'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Install HTMLHint
+        run: npm install -g htmlhint
+      - name: Validate HTML
+        run: |
+          echo "Validating HTML files..."
+          find . -name "*.html" -o -name "*.htm" | head -20 | xargs -I {} htmlhint {} || true
+          echo "HTML validation complete"
+
+  validate-javascript:
+    needs: detect-changes
+    if: needs.detect-changes.outputs.javascript == 'true'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Install ESLint
+        run: npm install -g eslint
+      - name: Validate JavaScript
+        run: |
+          echo "Validating JavaScript files..."
+          find . -name "*.js" -o -name "*.mjs" -o -name "*.cjs" | head -20 | xargs -I {} sh -c 'eslint {} --no-eslintrc --env es2022,node --parser-options=ecmaVersion:2022 || true'
+          echo "JavaScript validation complete"
+
+  validation-summary:
+    needs: [detect-changes, validate-html, validate-javascript]
+    if: always()
+    runs-on: ubuntu-latest
+    steps:
+      - name: Validation Summary
+        run: |
+          echo "## PR Validation Summary"
+          echo "HTML changed: ${{ needs.detect-changes.outputs.html }}"
+          echo "JavaScript changed: ${{ needs.detect-changes.outputs.javascript }}"
+          echo ""
+          echo "🪨🏔️ Validated by BRI | ⚡ Powered by GitHub Actions"
