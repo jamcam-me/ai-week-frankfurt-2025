@@ -1,0 +1,13 @@
+{
+  "recommendations": [
+    "github.vscode-pull-request-github",
+    "github.vscode-github-actions",
+    "esbenp.prettier-vscode",
+    "dbaeumer.vscode-eslint",
+    "ms-python.python",
+    "ms-python.black-formatter",
+    "ms-vscode.powershell",
+    "timonwong.shellcheck",
+    "DavidAnson.vscode-markdownlint"
+  ]
+}
